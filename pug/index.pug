@@ -6,6 +6,41 @@ html
     link(rel='stylesheet', href='vendor/bootstrap/css/bootstrap.css')
     script(src='js/main.js')
     script(src='js/parsley.js')
+    script(src='vendor/bootstrap/js/bootstrap.js')
+    script(type='text/javascript', src='https://oap.accuweather.com/launch.js')
+
  
-  body   
-    #mainform.container
+  body
+   header
+    .container
+      .row
+        .col-md-4
+          a.aw-widget-legal(href='https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727')
+          #awcc1513258582471.aw-widget-current(data-locationkey='', data-unit='c', data-language='en-us', data-useip='true', data-uid='awcc1513258582471')
+        .col-md-4
+          img.img-responsive.img-left(src='img/logo.png', alt='Responsive image')
+        .col-md-4
+          button.btn-log.center(type='button') Log in
+        nav
+         .col-md-12
+            ul             
+              li
+                a(href='news.html') News
+              li
+                a(href='style.html') Style
+              li
+                a(href='food&drink.html') Food and Drinks
+              li
+                a(href='travel.html') Travel
+              li
+                a(href='sport.html') Sport
+              li
+                a(href='Cars&moto.html') Cars and Moto
+              li
+                a(href='culture.html') Culture
+              li
+                a(href='video.html') Video
+              li
+                a(href='archive.html') Archive
+        section
+          
