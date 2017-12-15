@@ -1,46 +1,80 @@
 html
   head
     title Slik Homepage
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    
     link(rel='stylesheet', href='css/main.css')
-    link(rel='stylesheet', href='./node_modules/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='./node_modules/bootstrap/dist/css/bootstrap.css')  
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')  
     script(src='js/main.js')
-    script(src='js/parsley.js')
-    script(src='./node_modules/bootstrap/dist/js/bootstrap.js')
-    script(type='text/javascript', src='https://oap.accuweather.com/launch.js')
+    script(src='./node_modules/bootstrap/dist/js/bootstrap.bundle.js')
+    script(src='./node_modules/popper.js/dist/umd/popper.js')
+    
+    
 
- 
   body
    header
     .container
       .row
         .col-md-4
-          a.aw-widget-legal(href='https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727')
-          #awcc1513258582471.aw-widget-current(data-locationkey='', data-unit='c', data-language='en-us', data-useip='true', data-uid='awcc1513258582471')
+         img.img-responsive.logo(src='./img/widget.png')
         .col-md-4
-          img.img-responsive.img-center(src='img/logo.png', alt='Responsive image')
+          img.img-responsive.logo(src='./img/logo.png')
         .col-md-4
-          button.btn-log.right(type='button') Log in
-        nav
-         .col-md-12.col-xs-12
-            ul             
-              li
-                a(href='news.html') News
-              li
-                a(href='style.html') Style
-              li
-                a(href='food&drink.html') Food and Drinks
-              li
-                a(href='travel.html') Travel
-              li
-                a(href='sport.html') Sport
-              li
-                a(href='Cars&moto.html') Cars and Moto
-              li
-                a(href='culture.html') Culture
-              li
-                a(href='video.html') Video
-              li
-                a(href='archive.html') Archive
-        section.base
-          
+          button.btn-login.float-right Log in  
+      nav.navbar.navbar-expand-lg.navbar-light.border-up  
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href='#')
+                | News 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#') Style
+            li.nav-item
+              a.nav-link(href='#') Food &amp; Drink
+            li.nav-item
+              a.nav-link(href='#') Travel
+            li.nav-item
+              a.nav-link(href='#') Sport
+            li.nav-item
+              a.nav-link(href='#') Cars &amp; Moto
+            li.nav-item
+              a.nav-link(href='#') Culture
+            li.nav-item
+              a.nav-link(href='#') Video
+            li.nav-item
+              a.nav-link(href='#') Archive
+          form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search 
+      section.grey-color
+        #mainCarousel.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#mainCarousel', data-slide-to='0')
+            li(data-target='#mainCarousel', data-slide-to='1')
+            li(data-target='#mainCarousel', data-slide-to='2')
+          .carousel-inner(role='listbox')
+            .carousel-item.active
+              img.d-block.img-fluid.banner-img(src='https://placeimg.com/980/500/nature', alt='First slide')
+              .carousel-caption.d-none.d-md-block
+                p.cat-lbl.center-lbl FOOD & DRINK
+                h1 Hella narwhal Cosby swea.
+                p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
+                button.banner-btn Read More
+            .carousel-item
+              img.d-block.img-fluid.banner-img(src='https://placeimg.com/980/500/nature', alt='Second slide')
+              .carousel-caption.d-none.d-md-block
+                button.banner-btn Read More
+            .carousel-item
+              img.d-block.img-fluid.banner-img(src='https://placeimg.com/980/500/nature', alt='Third slide')
+              .carousel-caption.d-none.d-md-block
+                button.banner-btn Read More
+          a.carousel-control-prev(href='#mainCarousel', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control-next(href='#mainCarousel', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+        section
