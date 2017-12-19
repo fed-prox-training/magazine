@@ -13,190 +13,254 @@ html
     script(src='./node_modules/popper.js/dist/umd/popper.js')
     
   body
-   header
-    .container
-      .row
-        .col-xs-4.col-md-4
-         img.img-responsive.logo(src='./img/widget.png')
-        .col-xs-4.col-md-4
-          img.img-responsive.logo(src='./img/logo.png')
-        .col-xs-4.col-md-4
-          button.btn-login.float-right
-            img(src='./img/login-icon.png')
-            |   Log in  
-      nav.navbar.navbar-expand-lg.navbar-light.border-up  
-        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.mr-auto
-            li.nav-item.active
-              a.nav-link(href='#')
-                | News 
-                span.sr-only (current)
-            li.nav-item
-              a.nav-link(href='#') Style
-            li.nav-item
-              a.nav-link(href='#') Food &amp; Drink
-            li.nav-item
-              a.nav-link(href='#') Travel
-            li.nav-item
-              a.nav-link(href='#') Sport
-            li.nav-item
-              a.nav-link(href='#') Cars &amp; Moto
-            li.nav-item
-              a.nav-link(href='#') Culture
-            li.nav-item
-              a.nav-link(href='#') Video
-            li.nav-item
-              a.nav-link(href='#') Archive
-          form.form-inline.my-2.my-lg-0
-            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
-            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search 
-      section.grey-color
-        #mainCarousel.carousel.slide(data-ride='carousel')
-          ol.carousel-indicators
-            li.active(data-target='#mainCarousel', data-slide-to='0')
-            li(data-target='#mainCarousel', data-slide-to='1')
-            li(data-target='#mainCarousel', data-slide-to='2')
-          .carousel-inner(role='listbox')
-            .carousel-item.active
-              img.d-block.img-fluid.banner-img(src='./img/banner.jpg', alt='First slide')
-              .carousel-caption.d-none.d-md-block
-                button.banner-btn FOOD & DRINK
-                h1 Hella narwhal Cosby swea.
-                p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
-                button.banner-btn Read More
-            .carousel-item
-              img.d-block.img-fluid.banner-img(src='./img/banner.jpg', alt='Second slide')
-              .carousel-caption.d-none.d-md-block
-                button.banner-btn FOOD & DRINK
-                h1 Hella narwhal Cosby swea.
-                p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
-                button.banner-btn Read More
-            .carousel-item
-              img.d-block.img-fluid.banner-img(src='./img/banner.jpg', alt='Third slide')
-              .carousel-caption.d-none.d-md-block
-                button.banner-btn FOOD & DRINK
-                h1 Hella narwhal Cosby swea.
-                p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
-                button.banner-btn Read More
-          a.carousel-control-prev(href='#mainCarousel', role='button', data-slide='prev')
-            span.carousel-control-prev-icon(aria-hidden='true')
-            span.sr-only Previous
-          a.carousel-control-next(href='#mainCarousel', role='button', data-slide='next')
-            span.carousel-control-next-icon(aria-hidden='true')
-            span.sr-only Next
-        article
-          .row
-            .col-md-9
-              .articles
-                .row
-                  .col-xs-6.col-md-6
-                    .article-box-big                 
-                      a.article-link(href='url') Cars & Moto
-                      h3 The 2015 Best-Dressed List: How Kate Middleton
-                      p.paragraphs-font Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum
-                  .col-xs-6.col-md-6        
-                    img.img-responsive.img-article(src='./img/car-1.png')            
-            .col-md-9
-              .row
-                .col-md-4
-                  .article-box-special
-                    p STYLE
-                    p.style-font Offbeat Portraits Give Stars
-                    img.img-responsive.logo(src='./img/special.png')
-                    button.style-btn READ MORE
-                .col-md-4
-                  .articles              
-                    img.img-responsive.img-small-article(src='./img/article-3.jpg')
-                    .article-box
-                      p.paragraphs-header Best of Minnesota 2015: Revealing wjat rocks
-                      p.paragraphs-font I whipped the Scotch tape from my pocket and said
-
-                .col-md-4
-                  .articles              
-                    img.img-responsive.img-long-article(src='./img/article-4.jpg')
-                    .article-box
+    header
+      .container
+        .row.header-container
+          .col-xs-12.col-md-4
+            img.img-responsive.logo(src='./img/widget.png')
+          .col-xs-2.col-md-4
+            img.img-responsive.logo(src='./img/logo.png')
+          .col-xs-2.col-md-4
+            button.btn-login.float-right
+              img(src='./img/login-icon.png')
+              |   Log in  
+        nav.navbar.navbar-expand-lg.navbar-light.border-up  
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+              li.nav-item.active
+                a.nav-link(href='#')
+                  | News 
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='#') Style
+              li.nav-item
+                a.nav-link(href='#') Food &amp; Drink
+              li.nav-item
+                a.nav-link(href='#') Travel
+              li.nav-item
+                a.nav-link(href='#') Sport
+              li.nav-item
+                a.nav-link(href='#') Cars &amp; Moto
+              li.nav-item
+                a.nav-link(href='#') Culture
+              li.nav-item
+                a.nav-link(href='#') Video
+              li.nav-item
+                a.nav-link(href='#') Archive
+              form(action='javascript:void(0);', method='get')
+                ul.toolbar.clearfix
+                  li
+                    input#search(type='search', placeholder='What are you looking for?')
+                  li
+                    button#btn-search(type='submit')
+                      span.fontawesome-search
           
-            .col-md-6
-              .articles
-                .row
-                  .col-xs-6.col-md-6
-                    .article-box-big                
-                      a.article-link(href='url') STYLE
-                      h4 Eames Molded Fiberglass Side Chair
-                      p.paragraphs-font The Eames Molded Fiberglass Side Chair with Wire Base is an iconic piece of American design history.
-                  .col-xs-6.col-md-6        
-                    .article-box-medium
-                      img.img-responsive.img-med-article(src='./img/article-7.png')
-            .col-md-3
-              .articles              
-                img.img-responsive.img-small-article(src='./img/article-6.jpg')
-                .article-box
-                  p.paragraphs-header Best of Minnesota 2015: Revealing wjat rocks
-                  p.paragraphs-font I whipped the Scotch tape from my pocket and said
-            .col-md-3
-              .articles              
-                img.img-responsive.img-small-article(src='./img/article-5.jpg')
-                .article-box
-                  p.paragraphs-header Reading Hemingway's Personal Letters
-                  p.paragraphs-font There isn't much that hasn't been said about Ernest Miller
-   Section
-    .container
-      .row.video-box                     
-          .col-md-3
-            p The Big Black Book Spring
-            video(width='100', height='100', autoplay='')
-              source(src='https://www.youtube.com/watch?v=SjYw_LaJxfA', type='video/mp4')
-              |   Your browser does not support the video tag.
-          .col-md-3
-            p Behind The Scenes video
-          .col-md-3
-            p Michelin-Starred French
-          .col-md-3
-            p the Smartwatch Wars
-   Footer
-    .container
-      .row.footer
-        .col-md-4
-          img.img-responsive.img-footer(src='./img/footer-logo.png')
-          p.paragraphs-font Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-        .col-md-8
-          .row 
-            .col-md-4.footer-box
-              p.footer-head Information
-              ul.footer-list
-                li
-                  a.footer-text-color(href='#') FAQS
-                li 
-                  a.footer-text-color(href='#') Size Guide
-                li 
-                  a.footer-text-color(href='#') Delivery Info
-                li 
-                  a.footer-text-color(href='#') Return Info
-                li 
-                  a.footer-text-color(href='#') Discount
-                li 
-                  a.footer-text-color(href='#') Our stores
-            .col-md-4.footer-box
-              p.footer-head Accounts
-              ul.footer-list
-                li 
-                  a.footer-text-color(href='#') login
-                li 
-                  a.footer-text-color(href='#') Register
-                li 
-                  a.footer-text-color(href='#') My Cart
-                li 
-                  a.footer-text-color(href='#') Orders
-                li 
-                  a.footer-text-color(href='#') Wishlist
-            .col-md-4.footer-box
-              p.footer-head Contact Us
-              p.footer-address 8 Park Avenue, East 21st Street, Apt. 304 San Francisco
-              p.footer-address Email:support@diiim.com
-              p.footer-address Phone: 415-515-6171
-              p.footer-address Fax: 415-515-6171
-      .row.grey-color
-        .col-md-12
-          p © 2015 Silk UI Kit All rights reserved
+        section.grey-color
+          #mainCarousel.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#mainCarousel', data-slide-to='0')
+              li(data-target='#mainCarousel', data-slide-to='1')
+              li(data-target='#mainCarousel', data-slide-to='2')
+            .carousel-inner(role='listbox')
+              .carousel-item.active
+                img.d-block.img-fluid.banner-img(src='./img/banner.jpg', alt='First slide')
+                .carousel-caption.d-none.d-md-block
+                  button.banner-btn FOOD & DRINK
+                  h1 Hella narwhal Cosby swea.
+                  p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
+                  button.banner-btn Read More
+              .carousel-item
+                img.d-block.img-fluid.banner-img(src='./img/banner.jpg', alt='Second slide')
+                .carousel-caption.d-none.d-md-block
+                  button.banner-btn FOOD & DRINK
+                  h1 Hella narwhal Cosby swea.
+                  p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
+                  button.banner-btn Read More
+              .carousel-item
+                img.d-block.img-fluid.banner-img(src='./img/banner.jpg', alt='Third slide')
+                .carousel-caption.d-none.d-md-block
+                  button.banner-btn FOOD & DRINK
+                  h1 Hella narwhal Cosby swea.
+                  p A few yeas ago, the Roots were musing over how to make their music-industry career pay. 
+                  button.banner-btn Read More
+            a.carousel-control-prev(href='#mainCarousel', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#mainCarousel', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
+          article
+            .row
+              .col-md-9        
+                  .row
+                    .col-md-12
+                      .articles
+                        .row          
+                          .col-md-6
+                            .article-box-big                 
+                              a.article-link(href='url') Cars & Moto
+                              h3 The 2015 Best-Dressed List: How Kate Middleton
+                              p.paragraphs-font Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum
+                            .comment-box
+                              img.img-responsive(src='./img/like.png')
+                              span.comment-space 273
+                              img.img-responsive(src='./img/comment.png')
+                              span.comment-space 23
+                              img.img-responsive(src='./img/time.png')
+                              span.comment-space 3 hours ago
+                          .col-xs-6.col-md-6        
+                            img.img-responsive.img-article(src='./img/car-1.png')            
+                  .row
+                    .col-md-4
+                      .article-box-special
+                        p STYLE
+                        p.style-font Offbeat Portraits Give Stars
+                        img.img-responsive.logo(src='./img/special.png')
+                        button.style-btn READ MORE
+                    .col-md-4
+                      .articles              
+                        img.img-responsive.img-small-article(src='./img/article-3.jpg')
+                        .article-box
+                          p.paragraphs-header Best of Minnesota 2015: Revealing what rocks
+                          p.paragraphs-font I whipped the Scotch tape from my pocket and said
+                          .comment-box-small
+                            img.img-responsive(src='./img/like.png')
+                            span.comment-space 298
+                            img.img-responsive(src='./img/comment.png')
+                            span.comment-space 12
+                            img.img-responsive(src='./img/time.png')
+                            span.comment-space 5 hours ago
+                    .col-md-4
+                      .articles              
+                        img.img-responsive.img-long-article(src='./img/article-4.jpg')
+                        .article-box
+                          .comment-box-small
+                              img.img-responsive(src='./img/author.png')
+                              span.comment-name Jason Geoege
+                              span.comment-space 7 hours ago
+              .col-md-3
+                .news
+                  h5.news-boxes NEWS
+                  img.img-responsive.img-news(src='./img/news-1.png')
+                  .news-boxes
+                    p.paragraphs-font Exclusive Hell on Wheels Season 5 Episode 5 Preview Scene
+                  .news-boxes
+                    p.paragraphs-font Exclusive Hell on Wheels Season 5 Episode 5 Preview Scene
+                  .news-boxes
+                    p.paragraphs-font Exclusive Hell on Wheels Season 5 Episode 5 Preview Scene
+                  .news-boxes
+                    p.paragraphs-font Exclusive Hell on Wheels Season 5 Episode 5 Preview Scene
+                  .news-boxes
+                    p.paragraphs-font Exclusive Hell on Wheels Season 5 Episode 5 Preview Scene
+                  button.btn-news ALL NEWS      
+            .row
+              .col-md-6
+                .articles
+                  .row
+                    .col-xs-6.col-md-6
+                      .article-box-big                
+                        a.article-link(href='url') STYLE
+                        h4 Eames Molded Fiberglass Side Chair
+                        p.paragraphs-font The Eames Molded Fiberglass Side Chair with Wire Base is an iconic piece of American design history.
+                        .btn-group
+                          button.border-left READ MORE
+                          button.border-right START SLIDESHOW
+
+                    .col-xs-6.col-md-6        
+                      .article-box-medium
+                        img.img-responsive.img-med-article(src='./img/article-7.png')
+              .col-md-3
+                .articles              
+                  img.img-responsive.img-small-article(src='./img/article-6.jpg')
+                  .article-box
+                    p.paragraphs-header Best of Minnesota 2015: Revealing wjat rocks
+                    p.paragraphs-font I whipped the Scotch tape from my pocket and said
+                    .comment-box-small
+                            img.img-responsive(src='./img/like.png')
+                            span.comment-space 308
+                            img.img-responsive(src='./img/comment.png')
+                            span.comment-space 34
+                            img.img-responsive(src='./img/time.png')
+                            span.comment-space 1 day ago
+              .col-md-3
+                .articles              
+                  img.img-responsive.img-small-article(src='./img/article-5.jpg')
+                  .article-box
+                    p.paragraphs-header Reading Hemingway's Personal Letters
+                    p.paragraphs-font There isn't much that hasn't been said about Ernest Miller
+                    .comment-box-small
+                            img.img-responsive(src='./img/like.png')
+                            span.comment-space 471
+                            img.img-responsive(src='./img/comment.png')
+                            span.comment-space 89
+                            img.img-responsive(src='./img/time.png')
+                            span.comment-space 2 days ago
+        .container
+            .row.video-box
+              p VIDEO
+                .row                          
+                  .col-md-3
+                    a(href='https://www.youtube.com/watch?v=JZf9TUDYmME')
+                      img.img-responsive.img-small-article(src='./img/video-1.jpg')
+                    p The Big Black Book Spring
+                  .col-md-3
+                    a(href='https://www.youtube.com/watch?v=JZf9TUDYmME')
+                      img.img-responsive.img-small-article(src='./img/video-2.jpg')
+                    p Behind The Scenes video
+                  .col-md-3
+                    a(href='https://www.youtube.com/watch?v=JZf9TUDYmME')
+                      img.img-responsive.img-small-article(src='./img/video-3.jpg')
+                    p Michelin-Starred French
+                  .col-md-3
+                    a(href='https://www.youtube.com/watch?v=JZf9TUDYmME')
+                      img.img-responsive.img-small-article(src='./img/video-4.jpg')
+                    p The Smartwatch Wars
+    Footer
+      .container
+        .row.footer
+          .col-md-4
+            img.img-responsive.img-footer(src='./img/footer-logo.png')
+            p.paragraphs-font Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
+          .col-md-8
+            .row 
+              .col-md-4.footer-box
+                p.footer-head Information
+                ul.footer-list
+                  li
+                    a.footer-text-color(href='#') FAQS
+                  li 
+                    a.footer-text-color(href='#') Size Guide
+                  li 
+                    a.footer-text-color(href='#') Delivery Info
+                  li 
+                    a.footer-text-color(href='#') Return Info
+                  li 
+                    a.footer-text-color(href='#') Discount
+                  li 
+                    a.footer-text-color(href='#') Our stores
+              .col-md-4.footer-box
+                p.footer-head Accounts
+                ul.footer-list
+                  li 
+                    a.footer-text-color(href='#') login
+                  li 
+                    a.footer-text-color(href='#') Register
+                  li 
+                    a.footer-text-color(href='#') My Cart
+                  li 
+                    a.footer-text-color(href='#') Orders
+                  li 
+                    a.footer-text-color(href='#') Wishlist
+              .col-md-4.footer-box
+                p.footer-head Contact Us
+                p.footer-address 8 Park Avenue, East 21st Street, Apt. 304 San Francisco
+                p.footer-address Email:support@diiim.com
+                p.footer-address Phone: 415-515-6171
+                p.footer-address Fax: 415-515-6171
+        .row.grey-color
+          .col-md-12
+            p © 2015 Silk UI Kit All rights reserved
+
+    script(src='js/main.js')
